@@ -1,0 +1,78 @@
+# =============================================================================
+# Borsel Handler — .gitignore
+# =============================================================================
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+*.egg
+dist/
+build/
+*.whl
+.pytest_cache/
+
+# ── Virtual environments ─────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+
+# ── Environment / secrets ────────────────────────────────────────────────────
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# ── IDE / editor ─────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ── OS files ─────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Storage data (keep directory structure, ignore contents) ─────────────────
+storage/raw/*
+storage/extracted/*
+storage/processed/*
+storage/quarantine/*
+storage/logs/*
+
+# Keep the directories themselves via .gitkeep
+!storage/raw/.gitkeep
+!storage/extracted/.gitkeep
+!storage/processed/.gitkeep
+!storage/quarantine/.gitkeep
+!storage/logs/.gitkeep
+
+# ── Docker ───────────────────────────────────────────────────────────────────
+docker-compose.override.yml
+
+# ── Testing / coverage ──────────────────────────────────────────────────────
+.coverage
+htmlcov/
+.pytest_cache/
+
+# ── Misc ─────────────────────────────────────────────────────────────────────
+*.log
+
+# Celery
+celerybeat-schedule
+celerybeat-schedule.*
+
+# Streamlit secrets
+.streamlit/secrets.toml
+dashboard/.streamlit/secrets.toml
+
+# Database backups
+*.sql
+*.dump
+*.backup
+
+# Temporary files
+*.tmp
+*.bak

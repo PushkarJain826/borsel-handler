@@ -1,0 +1,26 @@
+# Core web framework
+fastapi==0.115.*
+uvicorn[standard]==0.32.*
+
+# Data validation & settings
+pydantic==2.9.*
+pydantic-settings==2.6.*
+
+# Database — async driver + ORM
+sqlalchemy[asyncio]==2.0.*
+asyncpg==0.30.*
+psycopg[binary]==3.2.*
+alembic==1.14.*
+
+# Task queue
+celery[redis]==5.4.*
+
+# HTTP client (for future data collection)
+httpx==0.28.*
+
+# Market data providers (Demo MVP)
+yfinance>=0.2.40
+
+# Testing
+pytest==8.3.*
+pytest-asyncio==0.24.*

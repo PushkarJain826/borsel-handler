@@ -1,0 +1,59 @@
+# =============================================================================
+# Borsel Handler — .dockerignore
+# =============================================================================
+
+# ── Version control ──────────────────────────────────────────────────────────
+.git/
+.gitignore
+
+# ── Environment / secrets ────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+
+# ── Python caches ────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+*.egg
+dist/
+build/
+*.whl
+
+# ── Virtual environments ─────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+
+# ── Testing / coverage ──────────────────────────────────────────────────────
+.coverage
+htmlcov/
+.pytest_cache/
+
+# ── IDE / editor ─────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ── OS files ─────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Storage data (don't bake local data into the image) ──────────────────────
+storage/raw/*
+storage/extracted/*
+storage/processed/*
+storage/quarantine/*
+storage/logs/*
+
+# ── Docker ───────────────────────────────────────────────────────────────────
+docker-compose.yml
+docker-compose.override.yml
+
+# ── Documentation / project meta ─────────────────────────────────────────────
+README.md
+LICENSE
+*.md
